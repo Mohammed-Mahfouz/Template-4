@@ -39,6 +39,44 @@ ul {
     background-color: #f1f5f9;
     min-height: 100vh;
 }
+.toggle-checkbox {
+    -webkit-appearance: none;
+     appearance: none;
+}
+.toggle-switch {
+    background-color: #ccc;
+    width: 78px;
+    height: 32px;
+    border-radius: 16px;
+    position: relative;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.toggle-switch::before {
+    font-family: var(--fa-style-family-classic);
+    content: "\f00d";
+    font-weight: 900;
+    position: absolute;
+    background-color: white;
+    top: 4px;
+    left: 4px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #777;
+    transition: 0.3s;
+}
+.toggle-checkbox:checked + .toggle-switch {
+    background-color: var(--blue-color);
+}
+.toggle-checkbox:checked + .toggle-switch::before {
+    left: 50px;
+    content: "\f00c";
+    color: var(--blue-color);
+}
 /* Start Sidebar */
 .sidebar {
     width: 250px;
@@ -985,3 +1023,181 @@ ul {
     background-color: var(--red-color);
 }
 /* End Content */
+/* Start Settings */
+.settings-page {
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+.Site-Control {
+    border-radius: 10px;
+    background-color: white;
+    padding: 20px;
+}
+.Site-Control h2 {
+    margin: 0 0 10px 0;
+}
+.Site-Control p {
+    margin: 0%;
+    font-size: 15px;
+    color: #777;
+}
+.Site-Control .boxs {
+    display: flex;
+    flex-direction: column;
+}
+.Site-Control .boxs .box {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+}
+.Site-Control .boxs .box .text {
+    margin-bottom: 20px;
+}
+.Site-Control .boxs .box .text h5 {
+    margin: 20px 0 3px 0;
+    font-weight: normal;
+    font-size: 16px;
+}
+.Site-Control .boxs .box .text p {
+    margin: 0;
+    font-size: 13px;
+}
+.Site-Control .boxs .box textarea {
+    border: 1px solid #ccc;
+    resize: none;
+    min-height: 150px;
+    border-radius: 6px;
+    padding: 10px;
+    display: block;
+    width: 100%
+}
+@media (max-width: 767px){
+.settings-page {
+    grid-template-columns: minmax(100px, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px; }
+}
+.General-Info {
+    border-radius: 10px;
+    background-color: white;
+    padding: 20px;
+}
+.General-Info h2 {
+    margin: 0 0 10px 0;
+}
+.General-Info p {
+    margin: 0%;
+    margin-bottom: 20px;
+    font-size: 15px;
+    color: #777;
+}
+.General-Info .email {
+    display: inline-flex;
+    width: calc(100% - 80px);
+    background-color: #f0f4f8;
+}
+.Security-Info {
+    border-radius: 10px;
+    background-color: white;
+    padding: 20px;
+}
+.Security-Info h2 {
+    margin: 0 0 10px 0;
+}
+.Security-Info p {
+    margin: 0%;
+    margin-bottom: 20px;
+    font-size: 15px;
+    color: #777;
+}
+.Security-Info .boxs {
+    display: flex;
+    flex-direction: column;
+}
+.Security-Info .boxs .box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.Security-Info .boxs .box:not(:last-of-type) {
+    border-bottom: 1px solid rgb(238, 238, 238);
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+.Security-Info .boxs .box .text h5 {
+    margin: 0 0 8px 0;
+    font-weight: normal;
+    font-size: 15px;
+}
+.Security-Info .boxs .box .text p {
+    margin: 0%;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #777;
+}
+.Security-Info .boxs .box label {
+    display: contents;
+}
+.Security-Info .boxs .box .button-1 a {
+    padding: 4px 10px;
+    border-radius: 6px;
+    background-color: var(--blue-color);
+    color: white;
+}
+.Security-Info .boxs .box .button-2 a {
+    padding: 4px 10px;
+    border-radius: 6px;
+    background-color: #eee;
+    color: black;
+}
+.Social-Info {
+    border-radius: 10px;
+    background-color: white;
+    padding: 20px;
+}
+.Social-Info h2 {
+    margin: 0 0 10px 0;
+}
+.Social-Info p {
+    margin: 0%;
+    margin-bottom: 20px;
+    font-size: 15px;
+    color: #777;
+}
+.Social-Info .boxs {
+    display: flex;
+    flex-direction: column;
+}
+.Social-Info .boxs .box {
+    margin-bottom: 10px;
+    position: relative;
+}
+.Social-Info .boxs .box input {
+    padding: 10px 10px 10px 40px;
+    background-color: #f6f6f6;
+    color: #888888;
+    border: none;
+    border-radius: 6px;
+    width: 100%;
+}
+.Social-Info .boxs .box i {
+    position: absolute;
+    font-size: 14px;
+    top: 0px;
+    left: 0px;
+    width: 29px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #ccc;
+    color: #777;
+}
+.Social-Info .boxs .box:focus-within i {
+    color: black;
+}
+/* .Social-Info .boxs > .box:focus-within i {
+    color: black;
+  } */
+/* Start Settings */
