@@ -1431,4 +1431,57 @@ ul {
     top: 3px;
     font-size: 10px;
 }
+@media (max-width:767px){
+    .My-Skills-Latest-Activities {
+        flex-direction: column;
+    }
+}
+.My-Skills-Latest-Activities {
+    gap: 20px;
+}
+.My-Skills-Latest-Activities .My-Skills {
+    flex: 1;
+}
+.My-Skills-Latest-Activities .My-Skills ul li:not(:last-child){
+    padding: 0 0 15px 0;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 16px;
+}
+.My-Skills-Latest-Activities .My-Skills ul li span {
+    padding: 5px;
+    margin-right: 5px;
+    display: inline-flex;
+    padding: 4px 10px;
+    background-color: #eee;
+    border-radius: 6px;
+    font-size: 14px;
+}
+.My-Skills-Latest-Activities .Latest-Activities {
+    flex: 2;
+}
+.Latest-Activities .boxs {
+    display: flex;
+    flex-direction: column;
+}
+.Latest-Activities .boxs .box {
+    display: flex;
+    align-items: center;
+}
+.Latest-Activities .boxs .box:not(:last-child) {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 19px;
+}
+.Latest-Activities .boxs .box img {
+    width: 64px;
+    height: 64px;
+    margin-right: 10px;
+}
+.Latest-Activities .boxs .box .text {
+    flex: 1;
+}
+.Latest-Activities .boxs .box h5 {
+    font-weight: normal;
+}
 /*End Profile-page */
+
