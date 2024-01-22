@@ -1193,11 +1193,242 @@ ul {
     align-items: center;
     border-right: 1px solid #ccc;
     color: #777;
+    cursor: pointer;
 }
 .Social-Info .boxs .box:focus-within i {
     color: black;
 }
-/* .Social-Info .boxs > .box:focus-within i {
-    color: black;
-  } */
+.Widgets-Control {
+    border-radius: 10px;
+    background-color: white;
+    padding: 20px;
+}
+.Widgets-Control h2 {
+    margin: 0 0 10px 0;
+}
+.Widgets-Control p {
+    margin: 0%;
+    margin-bottom: 20px;
+    font-size: 15px;
+    color: #777;
+}
+.Widgets-Control .boxs {
+    display: flex;
+    flex-direction: column;
+}
+.Widgets-Control .boxs .box {
+    margin-bottom: 15px;
+    margin-left: 25px;
+}
+.Widgets-Control .boxs .box label {
+    cursor: pointer;
+    position: relative;
+}
+.Widgets-Control .boxs .box input {
+    -webkit-appearance: none;
+     appearance: none;
+}
+.Widgets-Control .boxs .box label::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #777;
+    left: -36px;
+    top: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.Widgets-Control .boxs .box label:hover:after {
+    border: 2px solid var(--blue-color);
+}
+.Widgets-Control .boxs .box label::before {
+    font-family: var(--fa-style-family-classic);
+    font-weight: 900;
+    content: "\f00c";
+    position: absolute;
+    left: -37px;
+    top: 4px;
+    font-size: 13px;
+    cursor: pointer;
+    background-color: var(--blue-color);
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 6px;
+    transition: 0.3s;
+    transform: scale(0);
+}
+.Widgets-Control .boxs .box input[type="checkbox"]:checked + label::before{
+    transform: scale(1) rotate(360deg);
+}
+.Widgets-Control .boxs .box input[type="checkbox"]:checked + label::after {
+    border: 2px solid var(--blue-color);
+}
+.Backup-Manager {
+    border-radius: 10px;
+    background-color: white;
+    padding: 20px;
+}
+.Backup-Manager h2 {
+    margin: 0 0 10px 0;
+}
+.Backup-Manager p {
+    margin: 0%;
+    margin-bottom: 20px;
+    font-size: 15px;
+    color: #777;
+}
+.Backup-Manager .cont-Backup {
+    display: flex;
+    flex-direction: column;
+}
+.Backup-Manager .servers {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+  }
+  @media (max-width: 767px) {
+    .Backup-Manager .servers {
+      flex-wrap: wrap;
+    }
+  }
+  .Backup-Manager .servers input {
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+  }
+  .Backup-Manager .servers .server {
+    border: 2px solid #eee;
+    position: relative;
+  }
+  .Backup-Manager .servers .server label {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+  }
+  .Backup-Manager .servers input[type="radio"]:checked + .server {
+    border-color: var(--blue-color);
+    color: var(--blue-color);
+  }
+.Backup-Manager .cont-Backup .boxs{
+    display: flex;
+    flex-direction: column;
+}
+.Backup-Manager .cont-Backup .boxs .box{
+    margin-bottom: 15px;
+    margin-left: 25px;
+}
+.Backup-Manager .cont-Backup .boxs .box input {
+    -webkit-appearance: none;
+     appearance: none;
+     cursor: pointer;
+}
+.Backup-Manager .cont-Backup .boxs .box label {
+    position: relative;
+    cursor: pointer;
+}
+.Backup-Manager .cont-Backup .boxs .box label::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #777;
+    border-radius: 50%;
+    left: -30px;
+    top: 2px;
+    cursor: pointer;
+}
+.Backup-Manager .cont-Backup .boxs .box label::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: var(--blue-color);
+    border-radius: 50%;
+    top: 6px;
+    left: -26px;
+    transform: scale(0);
+    transition: 0.3s;
+}
+.Backup-Manager .cont-Backup .boxs .box input[type="radio"]:checked + label::after{
+    border-color: var(--blue-color);
+}
+.Backup-Manager .cont-Backup .boxs .box input[type="radio"]:checked + label::before{
+    transform: scale(1);
+}
 /* Start Settings */
+/*Start Profile-page */
+@media (max-width: 767px) {
+    .Profile-page .my-Profils {
+        flex-direction: column;
+    }
+}
+.Profile-page .Profil-1{
+    width: 300px;
+}
+@media (min-width: 767px) {
+    .Profile-page .Profil-1{
+        border-right: 1px solid #eee;
+    }
+}
+.Profile-page .Profil-1 > img{
+    width: 120px;
+    height: 120px;
+}
+.Profile-page .Profil-1 .level {
+    height: 6px;
+    overflow: hidden;
+    margin: auto;
+    width: 70%;
+}
+.Profile-page .Profil-1 .level span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--blue-color);
+    border-radius: 6px;
+}
+.Profile-page .Profil-2 .box {
+    flex-wrap: wrap;
+    border-bottom: 1px solid #eee;
+    transition: 0.3s;
+}
+@media (max-width: 776px){
+    .Profile-page .Profil-2 .box {
+        text-align: center;
+    }
+    .Profile-page .Profil-2 .box label div {
+        margin: 0 auto;
+    }
+    .Profile-page .Profil-2 .box > div {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .Profile-page .Profil-2 h4 {
+        margin-bottom: 10px;
+    }
+} 
+.Profile-page .Profil-2 .box:hover {
+    background-color: #f9f9f9;
+}
+.Profile-page .Profil-2 .box > div {
+    min-width: 250px;
+}
+.Profile-page .Profil-2 h4 {
+    font-weight: normal;
+}
+.Profile-page .Profil-2 .box label div {
+    height: 20px;
+    width: 69px;
+}
+.Profile-page .Profil-2 .box label div::before {
+    width: 15px;
+    height: 15px;
+    top: 3px;
+    font-size: 10px;
+}
+/*End Profile-page */
