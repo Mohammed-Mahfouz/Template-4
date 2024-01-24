@@ -1484,4 +1484,318 @@ ul {
     font-weight: normal;
 }
 /*End Profile-page */
-
+/* Start Projects-page */
+.Projects-page {
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 20px;
+    margin: 20px;
+    position: relative;
+}
+.Mohammed-Dashboard::after {
+    content: "15/10/2021";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 13px;
+    color: var(--grey-color);
+}
+.Mohammed-Dashboard h4 {
+    font-weight: normal;
+}
+.Mohammed-Dashboard .image {
+    min-height: 80px;
+    margin-left: 20px;
+    display: flex;
+    align-items: flex-end;
+}
+.Mohammed-Dashboard .image  a{
+    left: 0;
+    bottom: 0;
+}
+.Mohammed-Dashboard .image a img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-left: -20px;
+}
+.Mohammed-Dashboard ul {
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+.Mohammed-Dashboard ul li span{
+    padding: 3px 8px;
+    margin-left: 5px;
+    width: fit-content;
+    font-size: 13px;
+    background-color: #eee;
+    border-radius: 6px;
+}
+.Mohammed-Dashboard .boxs {
+    border-top: 1px solid #eee;
+    margin-top: 15px;
+    padding-top: 15px;
+}
+.Mohammed-Dashboard .boxs .box-1 {
+    height: 8px;
+    width: 260px;
+    position: relative;
+    border-radius: 6px;
+}
+.Mohammed-Dashboard .boxs .box-1 span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 6px;
+}
+@media (max-width: 767px){
+    .Projects-page {
+    grid-template-columns: minmax(200px, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+}
+.Mohammed-Dashboard p {
+    font-size: 12px;
+}
+.Mohammed-Dashboard ul {
+    flex-direction: column;
+}
+.Mohammed-Dashboard ul li:not(:last-child) {
+    margin-bottom: 15px;
+    display: block;
+}
+.Mohammed-Dashboard .boxs {
+    flex-direction: column;
+}
+.Mohammed-Dashboard .boxs .box-1 {
+    margin-bottom: 15px;
+}
+}
+/* End Projects-page */
+/* Start Courses-page */
+.Courses-page {
+    gap: 20px;
+    margin: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.Courses-page .boxs {
+    overflow: hidden;
+}
+.Courses-page .boxs p {
+    line-height: 1.6;
+}
+.Courses-page .boxs .cover {
+    max-width: 100%;
+}
+.Courses-page .boxs .cover-2 {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    top: 20px;
+    left: 20px;
+    border: 2px solid white;
+}
+.Courses-page .boxs .info {
+    border-top: 1px solid #eee;
+    font-size: 13px;
+}
+.Courses-page .boxs .info .title {
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 13px;
+}
+/* End Courses-page */
+.Friends-page {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.Friends-page .contact {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+.Friends-page .contact i {
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 50%;
+    color: #666;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.Friends-page .boxs .icon {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.Friends-page .boxs .icon a {
+    margin-right: 5px
+}
+.Friends-page .boxs .icon .vip {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    opacity: 0.2;
+}
+.Files-page {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+}
+.Files-page .boxs {
+    min-width: 260px;
+}
+.Files-page .boxs .blue {
+    background-color: rgb(0 117 255 / 20%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Files-page .boxs .green {
+    background-color: #d3f3df;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Files-page .boxs .red {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fdd9d7;
+}
+.Files-page .boxs .orange {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fdecce;
+}
+.Files-page .boxs .icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.Files-page .boxs .size {
+    margin-left: auto;
+}
+.Files-page .boxs .upload {
+    margin: 15px auto 0;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+.Files-page .boxs .upload:hover {
+    background-color: var(--blue-alt-color);
+}
+.Files-page .boxs .upload i {
+    transition: 0.3s;
+}
+.Files-page .boxs .upload:hover > i {
+    animation: up-and-down infinite 0.7s;
+}
+@keyframes up-and-down {
+    0%, 100% {
+        transform: translateY(0px);
+    } 
+    50% {
+        transform: translateY(-5px);
+    }
+}
+.Files-page .files-content {
+    flex: 1;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+.Files-page .files-content img {
+    width: 64px;
+    height: 64px;
+    transition: 0.3s;
+}
+.Files-page .files-content img:hover {
+    transform: rotate(6deg);
+}
+.Files-page .files-content .info {
+    border-top: 1px solid #eee;
+}
+@media (max-width: 767px){
+    .Files-page {
+    flex-direction: column;
+    align-items: normal;
+}
+}
+/* Start Plans Page */
+.plans-page {
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  }
+  @media (max-width: 767px) {
+    .plans-page {
+      grid-template-columns: minmax(250px, 1fr);
+      margin-left: 10px;
+      margin-right: 10px;
+      gap: 10px;
+    }
+  }
+  .plans-page .plan .top {
+    border: 3px solid white;
+    outline: 3px solid transparent;
+  }
+  .plans-page .plan.green .top {
+    outline-color: var(--green-color);
+  }
+  .plans-page .plan.blue .top {
+    outline-color: var(--blue-color);
+  }
+  .plans-page .plan.orange .top {
+    outline-color: var(--orange-color);
+  }
+  .plans-page .plan.orange .top-1 {
+    border: 3px solid white;
+    outline: 3px solid transparent;
+    outline-color: var(--red-color);
+  }
+  .plans-page .plan .price {
+    position: relative;
+    font-size: 40px;
+    width: fit-content;
+    margin: auto;
+  }
+  .plans-page .plan .price span {
+    position: absolute;
+    left: -20px;
+    top: 0;
+    font-size: 25px;
+  }
+  .plans-page .plan ul li {
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    border-bottom: 1px solid #eee;
+  }
+  .plans-page .plan ul li .yes {
+    color: var(--green-color);
+  }
+  .plans-page .plan ul li i:not(.yes, .help) {
+    color: var(--red-color);
+  }
+  .plans-page .plan ul li i:first-child {
+    font-size: 18px;
+    margin-right: 5px;
+  }
+  .plans-page .plan ul li .help {
+    color: var(--grey-color);
+    margin-left: auto;
+    cursor: pointer;
+  }
+  .plans-page .plan.green .up-no {
+    outline-color: var(--red-color);
+  }
+  /* End Plans Page */
